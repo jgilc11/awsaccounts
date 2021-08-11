@@ -1,10 +1,11 @@
 #!/bin/bash
 #Script to generate a config and credentials file from AWS account's and different profile that you have in there
-#Author Jhonnatan Gil jhonnatan.gil@avaldigitallabs.com
+#Author Jhonnatan Gil jgilc1@ucentral.edu.co
 #Pres:
 #   - jq
 #   - awscli >= 2
 #   - AWS SSO profile in ~/.aws/config and config this profile in AWS_PROFILE_SSO var
+#   - Replace SSO_START_URL for your URL's company
 
 TMP_ACCOUNTS_FILE=tmp_accounts.json
 TMP_IDS_ACCOUNTS=tmp_idsaccounts
@@ -14,9 +15,8 @@ TMP_CRED_FILE=tmp_awscredentials
 
 
 #Using one account to read all asigned accounts
-#AWS_PROFILE_SSO=adl-common-ops
-AWS_PROFILE_SSO=ADL_Common_Operational-devops-innovation-knights-pro-999335850108
-AWS_SSO_START_URL=https://aval-aws.awsapps.com/start
+AWS_PROFILE_SSO=enterprise-ops
+AWS_SSO_START_URL=https://yourcompany-aws.awsapps.com/start
 AWS_SSO_REGION=us-east-1
 AWS_CRE_REGION=us-east-2
 AWS_TOKEN_SSO=''
